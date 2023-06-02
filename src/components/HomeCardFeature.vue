@@ -1,4 +1,5 @@
 <template>
+    <div>
         <div class="relative sm:h-96 mt-16">
             <img class="object-cover w-full h-56 sm:h-96 parallax" src="../assets/images/pcard.jpg" alt="" />
             <div class="absolute inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
@@ -56,6 +57,7 @@
             </div>
             </div>
         </div>
+    </div>
 </template>
 
 <script setup>
