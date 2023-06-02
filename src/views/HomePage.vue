@@ -1,6 +1,6 @@
 <template>
   <div class="font-poppins min-h-screen">
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-16 lg:py-20 bg-zinc-800">
+    <div class="px-4 py-16 mx-auto  md:max-w-full md:px-24 lg:px-16 lg:py-20 bg-zinc-800">
       <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
         <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
           <div class="max-w-xl mb-6">
