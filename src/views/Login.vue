@@ -101,6 +101,7 @@
         }).then((res) => {
             if(res.status == 200) {
                 localStorage.setItem('token', res.data)
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.data;
                 return router.push({
                     name: 'home'
                 })

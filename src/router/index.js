@@ -34,7 +34,7 @@ const router = createRouter({
       component: EducationPage
     },
     {
-      path: '/productDetail',
+      path: '/productDetail/:id',
       name: 'product-detail',
       component: ProductDetail
     },

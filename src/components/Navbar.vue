@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-amber-500 fixed top-0 w-full z-50 ">
+  <div class="navbar bg-amber-500 fixed top-0 w-full z-50" v-if="isLoggedIn">
     <div class="flex-1">
       <RouterLink
           to="/"
@@ -82,7 +82,7 @@
             </a>
           </li>
           <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><button @click="logout">Logout</button></li>
         </ul>
       </div>
       <div class="lg:hidden">
@@ -180,8 +180,8 @@
   </div>
 
 
-    <!-- <div
-      class="px-4 py-1 mx-auto  md:max-w-full md:px-24 lg:px-8 bg-zinc-800 font-poppins fixed top-0 w-full z-50"
+    <div
+      class="px-4 py-1 mx-auto  md:max-w-full md:px-24 lg:px-8 bg-zinc-800 font-poppins fixed top-0 w-full z-50" v-if="!isLoggedIn"
     >
       <div class="relative flex items-center justify-between">
         <RouterLink
@@ -340,18 +340,44 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </template>
   
 
 
 <script setup>
-    import { ref } from 'vue';
-    import { RouterLink } from 'vue-router';
+  import { ref, onMounted } from 'vue';
+  import { RouterLink, useRoute, useRouter } from 'vue-router';
+  import axios from 'axios';
 
+  const isLoggedIn = ref(false);
+  const route = useRoute();
+  const router = useRouter();
 
-    const isMenuOpen = ref(false);
+  onMounted(() => {
+    if (localStorage.getItem('token')) {
+      isLoggedIn.value = true;
+    } else {
+      isLoggedIn.value = false;
+    }
+  });
 
+  const logout = () => {
+    axios
+      .get('http://localhost:8000/api/logout')
+      .then((res) => {
+        if (res.status === 200) {
+          localStorage.removeItem('token');
+          router.push({ name: 'home' });
+          window.location.reload();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const isMenuOpen = ref(false);
 </script>
 
 <style lang="scss" scoped>
