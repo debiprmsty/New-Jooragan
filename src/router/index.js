@@ -3,6 +3,10 @@ import HomePage from "../views/HomePage.vue"
 import AboutPage from "../views/AboutPage.vue"
 import StorePage from '../views/StorePage.vue'
 import EducationPage from '../views/EducationPage.vue'
+import ProductDetail from '../components/ProductDetail.vue'
+import VideoDetail from '../components/VideoDetail.vue'
+import Register from "../views/Register.vue"
+import Login from "../views/Login.vue"
 
 
 
@@ -28,7 +32,27 @@ const router = createRouter({
       path: '/education',
       name: 'education',
       component: EducationPage
-    }
+    },
+    {
+      path: '/productDetail',
+      name: 'product-detail',
+      component: ProductDetail
+    },
+    {
+      path: '/eduDetail',
+      name: 'edu-detail',
+      component: VideoDetail
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
   ]
 })
 

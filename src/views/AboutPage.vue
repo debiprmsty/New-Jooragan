@@ -20,13 +20,13 @@
                 <div class="flex flex-col items-end px-3">
                   <img
                     class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                    src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                    src="../assets/images/h1.png"
                     alt=""
                   />
-                  <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="" />
+                  <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40" src="../assets/images/pcard.jpg" alt="" />
                 </div>
                 <div class="px-3">
-                  <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500" alt="" />
+                  <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80" src="../assets/images/h3.png" alt="" />
                 </div>
               </div>
             </div>
@@ -48,10 +48,12 @@
                     <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                     </svg>
                 </div>
-                <h6 class="font-semibold leading-5 text-amber-500">The quick, brown fox</h6>
+                <h6 class="font-semibold leading-5 text-amber-500">Platform Inovatif</h6>
                 </div>
                 <p class="mb-2 text-sm text-white">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+                    Platform inovatif pertama yang
+                    mempertemukan franchisor dengan franchisee hanya dalam satu
+                    genggaman.
                 </p>
                 <a href="/" aria-label="" class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
             </div>
@@ -68,10 +70,11 @@
                         <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                     </div>
-                    <h6 class="font-semibold leading-5 text-amber-500">The quick, brown fox</h6>
+                    <h6 class="font-semibold leading-5 text-amber-500">Design User Friendly</h6>
                     </div>
                     <p class="mb-2 text-sm text-white">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+                        Desain user friendly sehingga pengguna tidak
+                        akan kebingungan dalam menggunakan platform ini.
                     </p>
                     <a href="/" aria-label="" class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
                 </div>
@@ -88,10 +91,11 @@
                         <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                         </svg>
                     </div>
-                    <h6 class="font-semibold leading-5 text-amber-500">The quick, brown fox</h6>
+                    <h6 class="font-semibold leading-5 text-amber-500">Aman dan Mudah</h6>
                     </div>
                     <p class="mb-2 text-sm text-white">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam.
+                        Memudahkan pemilik bisnis dalam memperkenalkan dan menawarkan
+                        bisnisnya serta aman proses transaksinya.
                     </p>
                     <a href="/" aria-label="" class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
                 </div>
@@ -107,13 +111,13 @@
         
                 <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
                     <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-                        Build Your New <span class="text-blue-500">Idea</span>
+                        Visi <span class="text-amber-500">Jooragan</span>
                     </h2>
         
                     <p class="mt-4 text-gray-500 dark:text-gray-300">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-                        mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+                        Menjadi Platform
+                        Nomor 1 dalam Menciptakan Wirausahawan Muda Menuju Indonesia
+                        Maju.
                     </p>
                 </div>
             </div>
@@ -122,43 +126,48 @@
             <div
                 class="overflow-hidden bg-white dark:bg-gray-900 lg:flex lg:w-full lg:shadow-md lg:rounded-xl">
                 <div class="lg:w-1/2">
-                    <div class="h-64 bg-cover lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <img src="../assets/images/visi1.jpg" class="h-64 bg-cover lg:h-full" alt="" srcset="">
                 </div>
         
                 <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
                     <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-                        Build Your New <span class="text-blue-500">Idea</span>
+                        Misi <span class="text-amber-500">Jooragan</span>
                     </h2>
         
-                    <p class="mt-4 text-gray-500 dark:text-gray-300">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-                        mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
-                    </p>
+                    
+                    <ol>
+                        <li>
+                            <p class="mt-4 text-gray-500 dark:text-gray-300">
+                               1. Mempertemukan antara pemilik bisnis franchise dengan pihak atau
+                                masyarakat yang ingin menjadi franchisee.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="mt-2 text-gray-500 dark:text-gray-300">
+                               2. Memudahkan franchisor dalam menawarkan bisnisnya.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="mt-2 text-gray-500 dark:text-gray-300">
+                               3. Memudahkan masyarakat dalam melihat, memilih, dan membeli
+                               franchise.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="mt-2 text-gray-500 dark:text-gray-300">
+                               4. Meningkatkan jumlah wirausahawan di Indonesia.
+                            </p>
+                        </li>
+                        <li>
+                            <p class="mt-2 text-gray-500 dark:text-gray-300">
+                               5. Memberikan informasi terkini mengenai tips dalam memulai
+                               berbisnis, memanfaatkan peluang usaha, dan sebagainya.
+                            </p>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
-        <section class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 mb-24">
-            <div
-                class="overflow-hidden bg-white dark:bg-gray-900 lg:flex lg:w-full lg:shadow-md lg:rounded-xl">
-                <div class="lg:w-1/2">
-                    <div class="h-64 bg-cover lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')"></div>
-                </div>
-        
-                <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-                    <h2 class="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-                        Build Your New <span class="text-blue-500">Idea</span>
-                    </h2>
-        
-                    <p class="mt-4 text-gray-500 dark:text-gray-300">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-                        mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
     </div>
 </template>
 
