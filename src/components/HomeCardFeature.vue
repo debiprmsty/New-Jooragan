@@ -19,7 +19,7 @@
                 Rekomendasi Produk
             </h2>
             <div class="grid gap-5 row-gap-5 mb-4 lg:grid-cols-4 sm:grid-cols-2 ml-4 md:ml-0">
-                <div v-for="product in products">
+                <div v-for="product in products" :key="product.id">
                     <RouterLink :to="'/productDetail/' + product.id ">
                         <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:-translate-y-2">
                             <img class="object-cover w-full h-48 mt-2 rounded-lg" :src="url+'images/'+product.image" :alt="product.title">
@@ -59,7 +59,6 @@
         axios.get(url)
         .then((response)=>{
             products.value=response.data.data;
-            console.log(products.value);
         }).catch((err)=>{
             console.log(err);
         })
