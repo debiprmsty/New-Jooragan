@@ -176,9 +176,10 @@
 <script setup>
     import { RouterLink,useRouter } from 'vue-router';
     import {reactive,ref} from 'vue';
-    import axios from 'axios';
+    import { jooraganState } from '../../stores/jooragan.js';
 
     const router = useRouter();
+    const jooragan = jooraganState();
 
     const user = reactive({
         name:'',
@@ -196,12 +197,21 @@
         let password = user.password;
         let password_confirmation = user.password_confirmation;
 
+        const data = {
+            name,
+            email,
+            password:password_confirmation
+        };
+
+        
+
         if(password == password_confirmation) {
-            axios.post('http://localhost:8000/api/register', {name,email,password:password_confirmation}).then(()=> {
-            return router.push({ name: 'login' })
-            }).catch(err => {
-                validation.value = err.response.data.errors
+            jooragan.register(data).then((val) => {
+                return router.push({ name: 'login' });
+            }).catch((err) => {
+                console.log(err);
             })
+            
         }else {
             validasi_password.value = "Password tidak sama"
         }

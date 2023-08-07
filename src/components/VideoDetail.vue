@@ -2,13 +2,13 @@
    <!-- component -->
 <section class="text-gray-700 body-font overflow-hidden bg-white mt-12">
     <div class="container px-5 py-24 mx-auto">
-      <div class="lg:w-4/5 mx-auto flex flex-wrap" v-if="education">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap" v-if="jooragan.education">
         <video alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" controls>
-          <source :src="url + 'video/' + education.video_path" type="video/mp4">
+          <source :src="jooragan.educationVideo(jooragan.education.video_path)" type="video/mp4">
         </video>
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">{{ category.nama_education }}</h2>
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ education.name_education }}</h1>
+          <h2 class="text-sm title-font text-gray-500 tracking-widest">{{ jooragan.category_edu.nama_education }}</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ jooragan.education.name_education }}</h1>
           <div class="flex mb-4">
             
             <span class="flex py-2">
@@ -29,7 +29,7 @@
               </a>
             </span>
           </div>
-          <p class="leading-relaxed">{{ education.description }}</p>
+          <p class="leading-relaxed">{{ jooragan.education.description }}</p>
         </div>
       </div>
     </div>
@@ -38,25 +38,16 @@
 
 <script setup>
     import {ref,onMounted} from "vue";
-    import axios from 'axios';
+    import { jooraganState } from '../../stores/jooragan.js';
     import { useRoute } from "vue-router";
 
     const route = useRoute();
+    const jooragan = jooraganState();
 
-    const url = 'http://localhost:8000/api/education/';
-    const urlId = 'http://localhost:8000/api/education/' + route.params.id;
 
-    const education = ref(null);
-    const category = ref(null);
-
-    onMounted(()=> {
-      axios.get(urlId)
-        .then((res)=>{
-          education.value = res.data.data;
-          category.value = res.data.category;
-          console.log(res.data.category);
-        })
-        .catch((err)=>log.error(err))
+    onMounted(async ()=> {
+      window.scrollTo(0, 0);
+      await jooragan.getEducationDetail(route.params.id);
     })
 
 </script>

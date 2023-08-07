@@ -6,11 +6,11 @@
         </h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 lg:px-8 mb-32 mx-5 md:mx-0">
-      <div v-for="education in educations" :key="education.id">
+      <div v-for="education in jooragan.educations" :key="education.id">
         <article class="flex flex-col md:flex-row bg-white transition shadow-xl">
           <div class="sm:basis-56">
             <video class="aspect-square h-36 md:h-full w-full object-cover" controls>
-              <source :src="url + 'video/' + education.video_path" type="video/mp4">
+              <source :src="jooragan.educationVideo(education.video_path)" type="video/mp4">
             </video>
           </div>
         
@@ -43,16 +43,13 @@
 
 <script setup>
   import { RouterLink } from 'vue-router';
-  import axios from 'axios';
-  import {ref,onMounted} from 'vue'
+  import { jooraganState } from '../../stores/jooragan.js';
+  import {onMounted} from 'vue'
 
-  const educations = ref(null);
-  const url = 'http://localhost:8000/api/education/'
+  const jooragan = jooraganState();
 
-  onMounted(()=>{
-    axios.get(url)
-      .then((res) => educations.value = res.data.data)
-      .catch((err) => console.log(err));
+  onMounted(async ()=>{
+    await jooragan.getEducations();
   })
 
 

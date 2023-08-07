@@ -47,7 +47,7 @@
                                 
                                 </div>
                             </div>
-                            <h5 class="text-sm text-red-500 mb-3" v-if="validation">{{ validation.email[0] }}</h5>
+                            <h5 class="text-sm text-red-500 mb-3" v-if="validation">{{ validation.message }}</h5>
                             <div class="flex items-center mb-6 -mt-4">
                                 <div class="flex ml-auto">
                                     <a href="#" class="inline-flex text-xs font-thin text-gray-500 sm:text-sm dark:text-gray-100 hover:text-gray-700 dark:hover:text-white">
@@ -78,10 +78,12 @@
 
 <script setup>
     import {reactive,ref} from 'vue';
-    import axios from 'axios';
+    import { jooraganState } from '../../stores/jooragan.js';
     import { useRouter } from 'vue-router';
+    import axios from 'axios';
 
     const router = useRouter();
+    const jooragan = jooraganState();
 
     const user = reactive({
         email:'',
@@ -92,23 +94,23 @@
     const loginFailed = ref(null);
 
     const login = () => {
-        let email = user.email;
-        let password = user.password;
 
-        axios.post('http://localhost:8000/api/login', {
-            email,
-            password
-        }).then((res) => {
-            if(res.status == 200) {
-                localStorage.setItem('token', res.data)
-                axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.data;
+        const data = {
+            email:user.email,
+            password:user.password
+        };
+
+        jooragan.login(data).then((res) => {
+            if (res.length) {
+                localStorage.setItem('token', res)
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + res;
                 return router.push({
                     name: 'home'
                 })
             }
             loginFailed.value = true
         }).catch((err) => {
-            validation.value = err.response.data.errors
+            validation.value = err.response.data;
         })
     }
 

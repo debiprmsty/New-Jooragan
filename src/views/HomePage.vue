@@ -1,5 +1,5 @@
 <template>
-  <div class="font-poppins min-h-screen py-5 md:py-0">
+  <div class="font-poppins min-h-screen py-5 md:py-0 mb-16">
     <div class="px-4 py-16 mx-auto  md:max-w-full md:px-24 lg:px-16 lg:py-20 bg-zinc-800">
       <div class="flex flex-col items-center justify-between w-full mb-10 lg:flex-row">
         <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
@@ -50,7 +50,13 @@
     import HomeCardFeature from '../components/HomeCardFeature.vue';
     import HomeFeature from '../components/HomeFeature.vue';
     import EducationCardHome from '../components/EducationCardHome.vue'
+
+    import { onMounted } from 'vue';
     
+    onMounted(() => {
+      window.scrollTo(0, 0);
+    });
+
 </script>
 
 <style lang="scss" scoped>
